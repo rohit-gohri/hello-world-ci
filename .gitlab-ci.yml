@@ -1,0 +1,30 @@
+# http://docs.gitlab.com/ce/ci/yaml/README.html
+
+# https://hub.docker.com/r/library/node/tags/
+image: node:12
+
+variables:
+  CI: "true"
+  NODE_ENV: "test"
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  # TODO: use custom docker image with non-root user
+  - npm install --unsafe-perm
+
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  script:
+    - npm test
+
+build:
+  stage: build
+  script:
+    - npm run build
