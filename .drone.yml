@@ -1,0 +1,26 @@
+kind: pipeline
+name: default
+
+steps:
+- name: install
+  image: node:12
+  commands:
+  - npm i
+  - yarn lint
+  - yarn build
+  - yarn compile
+
+- name: lint
+  image: node:12
+  commands:
+  - npm run lint
+  
+- name: build
+  image: node:12
+  commands:
+  - npm run build
+
+- name: test
+  image: node:12
+  commands:
+  - npm run test
