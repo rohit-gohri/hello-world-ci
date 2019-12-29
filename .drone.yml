@@ -6,14 +6,11 @@ steps:
   image: node:12
   commands:
   - npm i
-  - yarn lint
-  - yarn build
-  - yarn compile
 
-- name: lint
-  image: node:12
-  commands:
-  - npm run lint
+# - name: lint
+#   image: node:12
+#   commands:
+#   - npm run lint
   
 - name: build
   image: node:12
