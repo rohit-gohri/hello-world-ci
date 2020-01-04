@@ -5,12 +5,100 @@ import {
     Split,
     Appear,
 } from 'mdx-deck';
+import Profile from './static/me.webp';
 
 export const theme = selected;
 
 # CI/CD
 
 #### Or how to automate the boring parts
+
+<Notes>
+Full Form: Continuous Integration & Continuous Delivery/Deployments
+</Notes>
+
+---
+
+<Image
+    src={Profile}
+    style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white',
+        WebkitTextStrokeWidth: '2px',
+        WebkitTextStrokeColor: '#000',
+        backgroundColor: 'white',
+    }}>
+
+# About Me
+
+</Image>
+
+<Notes>
+Most of you probably don't know me, my name is Rohit Gohri and I am a Sr. Software Developer at CollegeDunia. I am a fullstack developer with a deep interest in DevOps and optimising developer workflows.
+</Notes>
+
+---
+
+# Continuous Integration
+
+<Notes>
+
+The process of continuously testing/building/etc your code so that it is never in a broken state and is **always** deployable.
+
+</Notes>
+
+---
+
+## Requirements for CI
+
+<ul>
+    <Appear>
+        <li>Automated Setup/Containerization</li>
+        <li>Testability</li>
+        <li>Reproducibility</li>
+    </Appear>
+</ul>
+
+<Notes>
+
+These are requirements for the project for which you intend to implement CI.
+
+- Using things like [Docker](https://docs.docker.com/engine/docker-overview/) to make your code portable and easier to run on any machine and/or environments, or using Infrastructure as Code tools like [Ansible](https://docs.ansible.com/ansible/latest/user_guide/quickstart.html) to setup systems in an automated way
+
+- Your code should be testable in an automatic fashion. Could be unit tests, integration tests, api tests through Postman, or UI testing.
+
+- Test results should be same in different environments and on repeat runs
+
+There are also some implicit ones that aren't mentioned like a version control system (like Git), a Pull/Merge Request based check-in system.
+
+</Notes>
+
+---
+
+# Tools of the Trade
+
+- [Gitlab CI](https://docs.gitlab.com/ee/ci/)
+- [Drone.io](https://drone.io/)
+- [Github Actions](https://github.com/features/actions)
+- [Azure DevOps](https://azure.microsoft.com/en-in/services/devops/)
+- [Jenkins](https://jenkins.io/)
+- [JetBrains TeamCity](https://jenkins.io/)
+- [Travis CI](https://travis-ci.org/)
+- [Circle CI](https://circleci.com/)
+
+<Notes>
+
+Lots of options now. Big(Microsoft - Azure) & small (Drone.io) companies, SaaS (Azure), self-hosted(Jenkins), both (Drone) and mixed (Gitlab - SaaS mixed with self hosted runners).
+
+There are also small niche tools that plug into your existing infra, eg. DangerJS (adding custom project specific checks), Relative-CI (for comparing bundle-sizes), CodeCov for coverage, CodeQuality, etc. These work alongside/through your option of choice above.
+
+</Notes>
+
+---
+
+
 
 ---
 
