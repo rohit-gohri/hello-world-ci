@@ -5,13 +5,48 @@ import {
     Split,
     Appear,
 } from 'mdx-deck';
+import React from 'react'
 import Profile from './static/me.webp';
+
+export const Small = ({ children }) => (
+  <div
+    style={{
+      width: '60vw',
+      height: '60vw',
+      justifyContent: 'center',
+      textAlign: 'center'
+    }}
+  >
+    {children}
+  </div>
+)
+
+export const Left = ({ children }) => (
+  <div
+    style={{
+      textAlign: 'left'
+    }}
+  >
+    {children}
+  </div>
+)
+
+
+export const Tomato = ({ children }) => (
+  <strong
+    style={{
+      color: 'tomato',
+    }}
+  >
+    {children}
+  </strong>
+)
 
 export const theme = selected;
 
 # CI/CD
 
-#### Or how to automate the boring parts
+#### <Tomato>Or how to automate the boring parts</Tomato>
 
 <Notes>
 Full Form: Continuous Integration & Continuous Delivery/Deployments
@@ -41,7 +76,11 @@ Most of you probably don't know me, my name is Rohit Gohri and I am a Sr. Softwa
 
 ---
 
+<Small>
+
 # Continuous Integration
+
+</Small>
 
 <Notes>
 
@@ -51,13 +90,14 @@ The process of continuously testing/building/etc your code so that it is never i
 
 ---
 
-## Requirements for CI
+## Requirements for <Tomato>CI</Tomato>
 
 <ul>
     <Appear>
         <li>Automated Setup/Containerization</li>
         <li>Testability</li>
         <li>Reproducibility</li>
+        <li><Tomato>Culture</Tomato></li>
     </Appear>
 </ul>
 
@@ -65,13 +105,15 @@ The process of continuously testing/building/etc your code so that it is never i
 
 These are requirements for the project for which you intend to implement CI.
 
-- Using things like [Docker](https://docs.docker.com/engine/docker-overview/) to make your code portable and easier to run on any machine and/or environments, or using Infrastructure as Code tools like [Ansible](https://docs.ansible.com/ansible/latest/user_guide/quickstart.html) to setup systems in an automated way
+- **Automated Setup**: Using things like [Docker](https://docs.docker.com/engine/docker-overview/) to make your code portable and easier to run on any machine and/or environments, or using Infrastructure as Code tools like [Ansible](https://docs.ansible.com/ansible/latest/user_guide/quickstart.html) to setup systems in an automated way
 
-- Your code should be testable in an automatic fashion. Could be unit tests, integration tests, api tests through Postman, or UI testing.
+- **Testability**: Your code should be testable in an automatic fashion. Could be unit tests, integration tests, api tests through Postman, or UI testing.
 
-- Test results should be same in different environments and on repeat runs
+- **Reproducibility**: Test results should be same in different environments and on repeat runs
 
-There are also some implicit ones that aren't mentioned like a version control system (like Git), a Pull/Merge Request based check-in system.
+- **Culture**: All of this if useless if you or your team members don't follow the process, you may modify the process but all of you need to agreee on it.
+
+There are also some implicit ones that aren't mentioned like having a version control system (like Git), a Pull/Merge Request based check-in system, etc.
 
 </Notes>
 
@@ -90,7 +132,9 @@ There are also some implicit ones that aren't mentioned like a version control s
 
 <Notes>
 
-Lots of options now. Big(Microsoft - Azure) & small (Drone.io) companies, SaaS (Azure), self-hosted(Jenkins), both (Drone) and mixed (Gitlab - SaaS mixed with self hosted runners).
+Lots of options now. Big(Microsoft - Azure) & small (Drone.io) companies, SaaS (Azure), self-hosted(Jenkins), both (Drone, Gitlab) and mixed (Gitlab/Github - SaaS mixed with self hosted runners).
+
+A lot of them are also free for open source projects!
 
 There are also small niche tools that plug into your existing infra, eg. DangerJS (adding custom project specific checks), Relative-CI (for comparing bundle-sizes), CodeCov for coverage, CodeQuality, etc. These work alongside/through your option of choice above.
 
@@ -102,6 +146,8 @@ There are also small niche tools that plug into your existing infra, eg. DangerJ
 
 ---
 
+<Left>
+
 # Links
 
 ## Presentation & Repository
@@ -112,6 +158,8 @@ https://github.com/rohit-smpx/hello-ci-frontend
 
 - Github: https://github.com/rohit-smpx
 - Twitter: https://twitter.com/rohit_gohri
+
+</Left>
 
 ---
 
