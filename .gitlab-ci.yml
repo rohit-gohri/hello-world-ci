@@ -12,7 +12,6 @@ cache:
     - node_modules/
 
 before_script:
-  # TODO: use custom docker image with non-root user
   - npm install --unsafe-perm
 
 stages:

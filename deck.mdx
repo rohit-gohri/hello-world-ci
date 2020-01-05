@@ -6,6 +6,8 @@ import {
     Appear,
 } from 'mdx-deck';
 import React from 'react'
+import { CodeSurfer } from "code-surfer"
+import { vsDark as codeTheme } from "@code-surfer/themes"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -189,7 +191,7 @@ There are also small niche tools that plug into your existing infra, eg. DangerJ
 
 <Notes>
 
-For the demo I have already set up a simple repository on Github with create-react-app.
+So for the demo I have already set up a simple repository on Github with create-react-app.
 
 I have also added yaml configs for various CI providers in one single repo. You can check how they are setup later.
 
@@ -209,13 +211,13 @@ I have also added yaml configs for various CI providers in one single repo. You 
 
 <Notes>
 
-> Send link to slack channel at this time
+<Tomato>Send link to slack channel at this time</Tomato>
 
-It would be great if you could take out your laptops. Open the link:
+It would be great if you could take out your laptops and open the link:
 
 - Fork the project
 - Clone it
-- Create and checkout to a branch: `git checkout -b demo`
+- Create and checkout to a new branch: `git checkout -b demo`
 - Do `npm i` or `yarn`
 - Start the website: `npm start` or `yarn start`
 
@@ -223,6 +225,62 @@ It would be great if you could take out your laptops. Open the link:
 
 ---
 
+# Open a PR
+
+- Make some changes
+<!-- TODO: Ask to do some specific change or let them do whatever. Want to see a mix of failing and passing pipelines -->
+- Commit and push your code
+- Open the repository and Create a new PR
+- Wait for results
+
+<Notes>
+
+Already have 2 PRs open already (one passing and one failing).
+Wait for people to do this.
+
+- Show some results
+- one failing
+- one passing
+- different providers
+- Lastly focus on Gitlab CI results to associate with next slide
+
+</Notes>
+
+---
+
+# How did this happen?
+
+Let's look at one example config (`.gitlab-ci.yml`)
+
+---
+
+<CodeSurfer theme={codeTheme} subtitle=".gitlab-ci.yml">
+
+```yaml file=./.gitlab-ci.yml
+```
+
+```yaml 4,5 file=./.gitlab-ci.yml
+```
+
+```yaml 17:19 file=./.gitlab-ci.yml
+```
+
+```yaml 14,15 file=./.gitlab-ci.yml
+```
+
+</CodeSurfer>
+
+<Notes>
+
+It is written in YAML(most of these are). This file defines a pipeline that will be run whenever you push your code. Let's look at what each of these mean:
+
+CodeSnippets:
+
+1. This is the base (Docker) image on which each stage in the pipeline will run 
+2. These are stages defined that we saw in the UI
+3. This script runs before every job in the pipeline
+
+</Notes>
 
 ---
 
@@ -242,7 +300,7 @@ It would be great if you could take out your laptops. Open the link:
 
 <Notes>
 
-The presentation is also in the same repo as the one you used for the Demo. Feel free to check it out and suggest any changes.
+My presentation is also a js project (built with mdx-deck) and resides in the same repo as the one you used for the Demo. Feel free to check it out and suggest any changes.
 
 </Notes>
 
