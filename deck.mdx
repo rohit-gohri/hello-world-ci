@@ -8,9 +8,9 @@ import {
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import Profile from './static/me.webp';
+import QRCode from './static/qr.png';
 
 export const Small = ({ children }) => (
   <div
@@ -48,12 +48,18 @@ export const Tomato = ({ children }) => (
 
 export const theme = selected;
 
-# CI/CD
+<!-- Begin Slides -->
+
+# CI
 
 #### <Tomato>Or how to automate the boring parts</Tomato>
 
 <Notes>
-Full Form: Continuous Integration & Continuous Delivery/Deployments
+
+Hello everyone! 
+
+Today I'm going to talk about the CI part of CI/CD (Continuous Integration & Continuous Delivery), or as how I like to call it, 'How to automate the boring parts' 
+
 </Notes>
 
 ---
@@ -70,12 +76,16 @@ Full Form: Continuous Integration & Continuous Delivery/Deployments
         backgroundColor: 'white',
     }}>
 
-# About Me
+# About Me 👨‍💻 
 
 </Image>
 
 <Notes>
-Most of you probably don't know me, my name is Rohit Gohri and I am a Sr. Software Developer at CollegeDunia. I am a fullstack developer with a deep interest in DevOps and optimising developer workflows.
+
+First, a little about me. My name is Rohit Gohri, I am a Sr. Software Developer at CollegeDunia. 
+
+I am a full stack developer with a keen interest in DevOps, I love optimising developer workflows and working on devloper tooling.
+
 </Notes>
 
 ---
@@ -84,19 +94,31 @@ Most of you probably don't know me, my name is Rohit Gohri and I am a Sr. Softwa
 
 # 🕕 🕙 🕛 🕞
 
-# Continuous Integration
+# What Is Continuous Integration?
 
 </Small>
 
 <Notes>
 
-The process of continuously testing/building/etc your code so that it is never in a broken state and is **always** deployable.
+The process of continuously testing/building/etc your code as you **push** it so that problems get detected early, your main branch is never in a broken state and is **always** deployable.
 
 </Notes>
 
 ---
 
-## Requirements for <Tomato>CI</Tomato>
+# Why should you care?
+
+<Notes>
+
+- Single source of truth: No more "But it works on my machine"
+- Enforce common rules for teams: Have a linting config? Have a codestyle? Want to enforce sepecific folder structures? Everything can be checked by the CI
+- Faster/Better Code Reviews: Having the basic stuff automatically checked leaves the reviewer to focus on the code
+
+</Notes>
+
+---
+
+## Prerequisites for <Tomato>CI</Tomato>
 
 <ul>
     <Appear>
@@ -109,7 +131,7 @@ The process of continuously testing/building/etc your code so that it is never i
 
 <Notes>
 
-These are requirements for the project for which you intend to implement CI.
+There are some things that your project & team need to have before you start this journey.
 
 - **Automated Setup**: Using things like [Docker](https://docs.docker.com/engine/docker-overview/) to make your code portable and easier to run on any machine and/or environments, or using Infrastructure as Code tools like [Ansible](https://docs.ansible.com/ansible/latest/user_guide/quickstart.html) to setup systems in an automated way
 
@@ -117,7 +139,7 @@ These are requirements for the project for which you intend to implement CI.
 
 - **Reproducibility**: Test results should be same in different environments and on repeat runs
 
-- **Culture**: All of this if useless if you or your team members don't follow the process, you may modify the process but all of you need to agreee on it.
+- **Culture**: All of this if useless if you or your team members don't follow the process all of you set for yourselves. A failing CI pipeline is useless if the branch gets merged anyway.
 
 There are also some implicit ones that aren't mentioned like having a version control system (like Git), a Pull/Merge Request based check-in system, etc.
 
@@ -135,37 +157,94 @@ There are also some implicit ones that aren't mentioned like having a version co
 - [JetBrains TeamCity](https://jenkins.io/)
 - [Travis CI](https://travis-ci.org/)
 - [Circle CI](https://circleci.com/)
+- .....
 
 <Notes>
 
-Lots of options now. Big(Microsoft - Azure) & small (Drone.io) companies, SaaS (Azure), self-hosted(Jenkins), both (Drone, Gitlab) and mixed (Gitlab/Github - SaaS mixed with self hosted runners).
+There are lots of options in the market now. 
+- Size
+  - Big (Microsoft - Azure) 
+  - Small (Drone.io) 
+- Model
+  - SaaS (Azure)
+  - Self-hosted(Jenkins)
+  - Both (Drone, Gitlab)
+  - Mixed: SaaS + Self Hosted Runners (Gitlab/Github).
 
-A lot of them are also free for open source projects!
+A lot of them are also free for open source projects! So there is no excuse to not use these on your next personal project.
 
-There are also small niche tools that plug into your existing infra, eg. DangerJS (adding custom project specific checks), Relative-CI (for comparing bundle-sizes), CodeCov for coverage, CodeQuality, etc. These work alongside/through your option of choice above.
+There are also small niche tools that plug into your existing infra, eg. DangerJS (adding custom project specific checks), Relative-CI (for comparing bundle-sizes), CodeCov for coverage, CodeClimate, etc. These work alongside/through your option of choice above.
+
+</Notes>
+
+---
+
+# Pick One?
+
+<Appear>
+
+# Or All of them? 🔥
+
+</Appear>
+
+<Notes>
+
+For the demo I have already set up a simple repository on Github with create-react-app.
+
+I have also added yaml configs for various CI providers in one single repo. You can check how they are setup later.
+
+</Notes>
+
+---
+
+# Demo
+
+<div style={{display: 'flex'}}>
+    <img src={QRCode} style={{width: '30vw'}}/>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <div style={{display: 'flex', alignItems: 'center', fontSize: '32px'}}>
+        github.com/rohit-smpx/hello-ci-frontend
+    </div>
+</div>
+
+<Notes>
+
+> Send link to slack channel at this time
+
+It would be great if you could take out your laptops. Open the link:
+
+- Fork the project
+- Clone it
+- Create and checkout to a branch: `git checkout -b demo`
+- Do `npm i` or `yarn`
+- Start the website: `npm start` or `yarn start`
 
 </Notes>
 
 ---
 
 
-
 ---
 
 <Left>
 
-# Links
+## Links
 
-### 🖼 Presentation & Repository
+##### 🖼 Presentation
 
-https://github.com/rohit-smpx/hello-ci-frontend
+#### https://rohit-smpx.github.io/hello-ci-frontend
 
-### Me
+#### <FontAwesomeIcon icon={faTwitter} /> - @rohit_gohri
 
-- <FontAwesomeIcon icon={faGithub} /> - https://github.com/rohit-smpx
-- <FontAwesomeIcon icon={faTwitter} /> - https://twitter.com/rohit_gohri
+#### <FontAwesomeIcon icon={faGithub} /> - rohit-smpx
 
 </Left>
+
+<Notes>
+
+The presentation is also in the same repo as the one you used for the Demo. Feel free to check it out and suggest any changes.
+
+</Notes>
 
 ---
 
