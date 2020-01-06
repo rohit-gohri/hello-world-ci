@@ -11,42 +11,9 @@ import { vsDark as codeTheme } from "@code-surfer/themes"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+import { Small, Left, Tomato } from './components';
 import Profile from './static/me.webp';
 import QRCode from './static/qr.png';
-
-export const Small = ({ children }) => (
-  <div
-    style={{
-      width: '60vw',
-      height: '60vw',
-      justifyContent: 'center',
-      textAlign: 'center'
-    }}
-  >
-    {children}
-  </div>
-)
-
-export const Left = ({ children }) => (
-  <div
-    style={{
-      textAlign: 'left'
-    }}
-  >
-    {children}
-  </div>
-)
-
-
-export const Tomato = ({ children }) => (
-  <strong
-    style={{
-      color: 'tomato',
-    }}
-  >
-    {children}
-  </strong>
-)
 
 export const theme = selected;
 
