@@ -1,0 +1,31 @@
+name: MDX Deck
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Build deck
+      run: |
+        npm ci
+        rm -rf public
+        npm run build:deck
+      env:
+        CI: true
+    - name: Deploy to github pages
+      uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
+      with:
+        repo-token: ${{ secrets.GH_PAT }}
+        site-directory: "public"
+        commit-message: "Deploy deck"
