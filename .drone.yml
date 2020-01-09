@@ -1,3 +1,5 @@
+# https://docs.drone.io/configure/pipeline/overview/
+
 kind: pipeline
 name: default
 
@@ -7,17 +9,12 @@ steps:
   commands:
   - npm i
 
-# - name: lint
-#   image: node:12
-#   commands:
-#   - npm run lint
-  
+- name: test
+  image: node:12
+  commands:
+  - npm run test  
+
 - name: build
   image: node:12
   commands:
   - npm run build
-
-- name: test
-  image: node:12
-  commands:
-  - npm run test
