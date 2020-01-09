@@ -35,7 +35,9 @@ Gitlab CI integrates with external git repositories (including Github ones) to m
 
 ## Deployments:
 
-### Using [Zeit.co](https://zeit.co/)
+### Using [ZEIT Now](https://zeit.co/)
+
+View the website at [https://hello-ci-frontend.now.sh/](https://hello-ci-frontend.now.sh/). Deployed using [now-cli](https://zeit.co/docs).
 
 ## Docker Images
 
