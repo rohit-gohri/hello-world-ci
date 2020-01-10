@@ -14,9 +14,9 @@ before_script:
   - npm install --unsafe-perm
 
 stages:
+  - lint
   - test
   - build
-  - lint
 
 test:
   stage: test
