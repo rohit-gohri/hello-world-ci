@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h3>
-          Hello CI!
+           CI, Hello!
         </h3>
         <p>
           A demo website for showing different CI pipelines.
