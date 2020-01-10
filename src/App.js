@@ -12,6 +12,7 @@ function App() {
         </h3>
         <p>
           A demo website for showing different CI pipelines.
+          Changed by ~jazeabby
         </p>
         <a
           className="App-link"
