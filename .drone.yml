@@ -18,4 +18,3 @@ steps:
   image: node:12
   commands:
   - npm run build
-  - npm run lint
