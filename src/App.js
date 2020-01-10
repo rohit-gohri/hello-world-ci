@@ -7,16 +7,24 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h3>
+          Hello CI!
+        </h3>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          A demo website for showing different CI pipelines.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/rohit-smpx/hello-ci-frontend">
+            View The Repo
+        </a>
+        <a
+          className="App-link"
+          href="https://slides.gohri-rohit.now.sh/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          View Slides
         </a>
       </header>
     </div>
