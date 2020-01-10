@@ -12,9 +12,14 @@ steps:
 - name: test
   image: node:12
   commands:
-  - npm run test  
+  - npm run test
 
 - name: build
   image: node:12
   commands:
   - npm run build
+
+- name: lint
+  image: node:12
+  commands:
+  - npm run lint
