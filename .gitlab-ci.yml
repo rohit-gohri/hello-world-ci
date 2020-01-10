@@ -16,6 +16,7 @@ before_script:
 stages:
   - test
   - build
+  - myTest
 
 test:
   stage: test
@@ -26,3 +27,8 @@ build:
   stage: build
   script:
     - npm run build
+
+myTest:
+  stage: myTest
+  script:
+    - npm run lint
