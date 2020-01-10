@@ -15,7 +15,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://github.com/rohit-smpx/hello-ci-frontend">
+          href="https://github.com/rohit-smpx/hello-ci-frontend/">
             View The Repo
         </a>
         <a
@@ -24,7 +24,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Slides
+          <i>View Slides</i>
         </a>
       </header>
     </div>
