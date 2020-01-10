@@ -14,9 +14,14 @@ before_script:
   - npm install --unsafe-perm
 
 stages:
+  - lint
   - test
   - build
-  - myTest
+
+lint:
+  stage: lint
+  script:
+    - npm run lint
 
 test:
   stage: test
@@ -27,8 +32,3 @@ build:
   stage: build
   script:
     - npm run build
-
-myTest:
-  stage: myTest
-  script:
-    - npm run lint
