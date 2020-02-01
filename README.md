@@ -2,7 +2,7 @@
 
 A hello-world equivalent for different CI providers: all doing a simple task of testing & building a basic CRA app.
 
-> View Related Slides: https://github.com/rohit-smpx/slides
+> View Related Slides: https://github.com/rohit-gohri/slides
 
 ## Pipelines:
 
@@ -10,7 +10,7 @@ A hello-world equivalent for different CI providers: all doing a simple task of 
 
 [View file: nodejs.yml](.github/workflows/nodejs.yml)
 
-[![Github Action Status](https://github.com/rohit-smpx/hello-ci-frontend/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/rohit-smpx/hello-ci-frontend/actions?query=branch%3Amaster)
+[![Github Action Status](https://github.com/rohit-gohri/hello-ci-frontend/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/rohit-gohri/hello-ci-frontend/actions?query=branch%3Amaster)
 
 ### [Gitlab CI](https://docs.gitlab.com/ee/ci/)
 
@@ -25,13 +25,13 @@ Gitlab CI integrates with external git repositories (including Github ones) to m
 
 [View file: .drone.yml](.drone.yml)
 
-[![Drone Build Status](https://cloud.drone.io/api/badges/rohit-smpx/hello-ci-frontend/status.svg)](https://cloud.drone.io/rohit-smpx/hello-ci-frontend)
+[![Drone Build Status](https://cloud.drone.io/api/badges/rohit-gohri/hello-ci-frontend/status.svg)](https://cloud.drone.io/rohit-gohri/hello-ci-frontend)
 
 ### [Travis CI](https://travis-ci.com/)
 
 [View file: .travis.yml](.travis.yml)
 
-[![Travis Pipeline Status](https://travis-ci.org/rohit-smpx/hello-ci-frontend.svg?branch=master)](https://travis-ci.org/rohit-smpx/hello-ci-frontend)
+[![Travis Pipeline Status](https://travis-ci.org/rohit-gohri/hello-ci-frontend.svg?branch=master)](https://travis-ci.org/rohit-gohri/hello-ci-frontend)
 
 ## Deployments:
 
