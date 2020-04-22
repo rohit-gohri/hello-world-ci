@@ -7,7 +7,12 @@ steps:
 - name: install
   image: node:12
   commands:
-  - npm i
+  - npm ci
+
+- name: lint
+  image: node:12
+  commands:
+  - npm run lint
 
 - name: test
   image: node:12

@@ -3,7 +3,6 @@
 image: node:12
 
 variables:
-  CI: "true"
   NODE_ENV: "test"
 
 cache:
@@ -11,7 +10,7 @@ cache:
     - node_modules/
 
 before_script:
-  - npm install --unsafe-perm
+  - npm ci --unsafe-perm
 
 stages:
   - lint

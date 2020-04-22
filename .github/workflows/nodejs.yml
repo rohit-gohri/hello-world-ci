@@ -17,21 +17,20 @@ jobs:
       with:
         node-version: 12.x
 
-    - name: install
+    - name: Install node_modules
       run: |
         npm ci
-      env:
-        CI: true
 
-    - name: test
+    - name: Lint the code
+      run: |
+        npm run lint
+
+    - name: Run tests
       run: |
         npm test
       env:
         NODE_ENV: test
-        CI: true
 
-    - name: build
+    - name: Build site
       run: |
         npm run build
-      env:
-        CI: true
