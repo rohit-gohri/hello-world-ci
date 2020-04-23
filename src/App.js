@@ -24,7 +24,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          View Slides
+          View Deck
         </a>
       </header>
     </div>
