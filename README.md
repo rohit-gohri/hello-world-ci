@@ -2,7 +2,7 @@
 
 A hello-world equivalent for different CI providers: all doing a simple task of testing & building a basic CRA app.
 
-> View Related Slides: https://github.com/rohit-gohri/slides
+> View Related Slides: https://rohit.page/slides/ci/
 
 ## Pipelines:
 

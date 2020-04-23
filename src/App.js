@@ -20,7 +20,7 @@ function App() {
         </a>
         <a
           className="App-link"
-          href="https://slides.gohri-rohit.now.sh/"
+          href="https://rohit.page/slides/ci/"
           target="_blank"
           rel="noopener noreferrer"
         >
