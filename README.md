@@ -10,7 +10,7 @@ A hello-world equivalent for different CI providers: all doing a simple task of 
 
 [View file: nodejs.yml](.github/workflows/nodejs.yml)
 
-[![Github Action Status](https://github.com/rohit-gohri/hello-ci-frontend/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/rohit-gohri/hello-ci-frontend/actions?query=branch%3Amaster)
+[![Github Action Status](https://github.com/rohit-gohri/hello-world-ci/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/rohit-gohri/hello-world-ci/actions?query=branch%3Amaster)
 
 ### [Gitlab CI](https://docs.gitlab.com/ee/ci/)
 
@@ -18,20 +18,20 @@ Gitlab CI integrates with external git repositories (including Github ones) to m
 
 [View file: .gitlab-ci.yml](.gitlab-ci.yml)
 
-[![Gitlab Pipeline Status](https://gitlab.com/rohit.gohri/hello-ci-frontend/badges/master/pipeline.svg
-)](https://gitlab.com/rohit.gohri/hello-ci-frontend/pipelines)
+[![Gitlab Pipeline Status](https://gitlab.com/rohit-gohri/hello-world-ci/badges/master/pipeline.svg
+)](https://gitlab.com/rohit-gohri/hello-world-ci/pipelines)
 
 ### [Drone.io](https://zeit.co/)
 
 [View file: .drone.yml](.drone.yml)
 
-[![Drone Build Status](https://cloud.drone.io/api/badges/rohit-gohri/hello-ci-frontend/status.svg)](https://cloud.drone.io/rohit-gohri/hello-ci-frontend)
+[![Drone Build Status](https://cloud.drone.io/api/badges/rohit-gohri/hello-world-ci/status.svg)](https://cloud.drone.io/rohit-gohri/hello-world-ci)
 
 ### [Travis CI](https://travis-ci.com/)
 
 [View file: .travis.yml](.travis.yml)
 
-[![Travis Pipeline Status](https://travis-ci.org/rohit-gohri/hello-ci-frontend.svg?branch=master)](https://travis-ci.org/rohit-gohri/hello-ci-frontend)
+[![Travis Pipeline Status](https://travis-ci.org/rohit-gohri/hello-world-ci.svg?branch=master)](https://travis-ci.org/rohit-gohri/hello-world-ci)
 
 ## Deployments:
 
