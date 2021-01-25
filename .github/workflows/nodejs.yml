@@ -25,11 +25,16 @@ jobs:
       run: |
         npm run lint
 
-    - name: Run tests
+    - name: Run tests (with coverage)
       run: |
-        npm test
+        npm test -- --coverage
       env:
         NODE_ENV: test
+    
+    - name: Upload coverage
+      run: npx codecov
+      env:
+        CODECOV_TOKEN:  ${{ secrets.CODECOV_TOKEN }} 
 
     - name: Build site
       run: |
